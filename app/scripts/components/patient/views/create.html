@@ -1,0 +1,76 @@
+<div class="row">
+    <section class="content" id="p-content">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">신규 등록</h3>
+            </div>
+            <div class="box-body">
+                <form role="form" name="userForm">
+                    <div layout="row">
+                        <md-input-container flex class="md-icon-float" >
+                            <md-icon md-svg-icon="social:person" class="person"></md-icon>
+                            <input ng-model="user.name" placeholder="한글이름 (필수)" ng-required="true">
+                        </md-input-container>
+                        <md-input-container flex class="md-icon-float" >
+                            <md-icon md-svg-icon="social:person" class="person"></md-icon>
+                            <input ng-model="user.engName" placeholder="영문이름 (필수)" ng-required="true">
+                        </md-input-container>
+                    </div>
+                    <div layout="row">
+                        <md-input-container flex>
+                            <label>생년월일</label>
+                            <input ng-model="user.birthDay" date-picker autocomplete="off">
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>입국일</label>
+                            <input ng-model="user.entryDate" date-picker autocomplete="off">
+                        </md-input-container>
+                        <md-radio-group flex ng-init="user.gender='MALE'" ng-model="user.gender" ng-required="true" layout="row">
+                            <md-radio-button value="MALE" class="md-primary">남</md-radio-button>
+                            <md-radio-button value="FEMALE">여</md-radio-button>
+                        </md-radio-group>
+                    </div>
+                    <div layout="row">
+                        <md-input-container flex>
+                            <label>국적</label>
+                            <md-select ng-model="user.nationality" ng-required="true">
+                                <md-option ng-repeat="nation in nationality" value="{{nation.id}}">{{nation.codeValue}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>직업</label>
+                            <md-select ng-model="user.job" ng-required="true">
+                                <md-option ng-repeat="job in jobs" value="{{job.id}}">{{job.codeValue}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <div daum-post oncomplete="oncomplete(zoneCode, fullRoadAddr, jibunAddress)"
+                            zone-code="postCode"
+                            full-road-addr="address"
+                            jibun-address="user.addressJibun">
+                        <div layout="row">
+                            <md-input-container flex="20" class="md-icon-float" >
+                                <md-icon md-svg-icon="maps:map"></md-icon>
+                                <input name="postCode" ng-model="user.postCode" placeholder="우편번호" ng-required="true">
+                            </md-input-container>
+                        </div>
+                        <div layout="row">
+                            <md-input-container flex="60" class="md-icon-float" >
+                                <md-icon md-svg-icon="maps:map"></md-icon>
+                                <input name="address" ng-model="user.address" placeholder="거주지" ng-required="true">
+                            </md-input-container>
+                            <md-input-container flex class="md-icon-float" >
+                                <md-icon md-svg-icon="maps:map"></md-icon>
+                                <input name="addressDetail" ng-model="user.addressDetail" placeholder="거주지 상세" ng-required="true">
+                            </md-input-container>
+                        </div>
+                        <label>지번 : {{user.addressJibun}}</label>
+                    </div>
+
+                    <md-button class="md-primary md-raised pull-right" ng-click="save(user, $event)" ng-disabled="userForm.$invalid" flex flex-md="100">저장</md-button>
+                </form>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </section>
+</div>
+

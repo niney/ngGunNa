@@ -1,0 +1,39 @@
+{
+	"name": "ng-gun-na",
+	"version": "0.0.0",
+  	"dependencies": {
+		"jquery": null,
+		"jquery-ui": null,
+	  	"bootstrap": null,
+		"angular": "1.4.3",
+	  	"angular-animate": "1.4.3",
+	  	"angular-aria": "1.4.3",
+	  	"angular-messages": "1.4.3",
+	  	"angular-resource": "1.4.3",
+	  	"angular-bootstrap": null,
+	  	"angular-ui-router": null,
+	  	"angular-material": null,
+		"requirejs": null,
+	  	"admin-lte": null,
+	  	"ngstorage": null,
+	  	"bootstrap-datepicker": null
+	},
+	"overrides": {
+	  	"bootstrap": {
+			"main": [
+			  "less/bootstrap.less",
+			  "dist/css/bootstrap.css",
+			  "dist/js/bootstrap.js"
+			]
+	  	},
+	  	"admin-lte": {
+			"main": [
+			  "index2.html",
+			  "dist/css/AdminLTE.css",
+			  "dist/js/app.js",
+			  "build/less/AdminLTE.less",
+			  "dist/css/skins/skin-black-light.css"
+			]
+		}
+	}
+}

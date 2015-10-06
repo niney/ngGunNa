@@ -1,0 +1,47 @@
+<md-dialog aria-label="register">
+    <div class="register-logo">
+        <a href="../../index2.html"><b>등록</b></a>
+    </div>
+    <div class="box box-primary">
+        <div class="box-body">
+            <div layout="row">
+                <md-input-container flex class="md-icon-float" >
+                    <md-icon md-svg-icon="social:person" class="person"></md-icon>
+                    <input ng-model="item.name" placeholder="한글이름 (필수)" ng-required="true">
+                </md-input-container>
+                <md-input-container flex class="md-icon-float" >
+                    <md-icon md-svg-icon="social:person" class="person"></md-icon>
+                    <input ng-model="item.engName" placeholder="영문이름 (필수)" ng-required="true">
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-input-container flex>
+                    <label>생년월일</label>
+                    <input ng-model="birthday" date-picker>
+                </md-input-container>
+                <md-radio-group flex ng-model="data.group1" layout="row">
+                    <md-radio-button value="man" class="md-primary">남</md-radio-button>
+                    <md-radio-button value="woman">여</md-radio-button>
+                </md-radio-group>
+            </div>
+            <div layout="row">
+                <md-input-container flex>
+                    <label>국적</label>
+                    <md-select ng-init="nations = ['중국', '필리핀', '네팔', '한국']" ng-model="nation">
+                        <md-option ng-repeat="nation in nations" value="{{nation}}">{{nation}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>직업</label>
+                    <md-select ng-init="jobs = ['없음','공장', '반출', '조립']" ng-model="job">
+                        <md-option ng-repeat="job in jobs" value="{{job}}">{{job}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <md-input-container flex class="md-icon-float" >
+                <md-icon md-svg-icon="social:person" class="person"></md-icon>
+                <input ng-model="item.addr" placeholder="거주지" ng-required="true">
+            </md-input-container>
+        </div><!-- /.box-body -->
+    </div><!-- /.box -->
+</md-dialog>

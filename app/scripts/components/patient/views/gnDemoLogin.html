@@ -1,0 +1,45 @@
+<md-dialog aria-label="login">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="../../index2.html"><b>건강과 나눔</b></a>
+        </div><!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form ng-submit="login()">
+                <div class="form-group has-feedback">
+                    <md-input-container>
+                        <!-- Use floating placeholder instead of label -->
+                        <md-icon md-svg-icon="content:mail" class="email"></md-icon>
+                        <input ng-model="item.email" type="email" placeholder="Email (required)" ng-required="true">
+                    </md-input-container>
+                </div>
+                <div class="form-group has-feedback">
+                    <md-input-container>
+                        <md-icon md-svg-icon="action:lock"></md-icon>
+                        <input ng-model="item.pass" type="password" placeholder="password (required)" ng-required="true">
+                    </md-input-container>
+                </div>
+                <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                    <div flex="70" class="checkbox icheck">
+                        <md-checkbox ng-model="item.remember" aria-label="Remember Me">
+                            Remember Me
+                        </md-checkbox>
+                    </div>
+                    <div flex="30">
+                        <md-button class="md-raised md-primary">로그인</md-button>
+                    </div>
+                </section>
+            </form>
+
+            <div class="social-auth-links text-center">
+                <p>- OR -</p>
+                <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
+                <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
+            </div><!-- /.social-auth-links -->
+
+            <a href="#">I forgot my password</a><br>
+            <a href="register.html" class="text-center">Register a new membership</a>
+
+        </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+</md-dialog>

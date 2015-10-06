@@ -1,0 +1,299 @@
+/************
+ * MENU
+ ************/
+/*.site-sidenav {
+    background: #106CC8;
+}
+.site-sidenav md-content {
+    background: transparent;
+}
+.site-sidenav,
+.site-sidenav.md-locked-open-add-active,
+.site-sidenav.md-locked-open {
+    width: 256px;
+    min-width: 256px;
+    max-width: 256px;
+}
+.site-sidenav > * {
+    min-width: 218px;
+}
+
+.cmd-menu,
+.cmd-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.cmd-menu li {
+    margin: 0;
+}
+.cmd-menu > li:nth-child(1) {
+    border-top: none;
+}
+.md-whiteframe-glow-z1 {
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 0px 2px 2px rgba(0, 0, 0, 0.098),
+    0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+}
+.cmd-menu > li {
+    border-bottom: 1px solid #267ED5;
+}*/
+
+.cmd-menu .md-button {
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    align-items: inherit;
+    margin: 0;
+    line-height: 44px;
+    overflow: hidden;
+    padding: 0px 16px;
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
+    text-transform: none;
+}
+
+.cmd-menu .treeview-menu > li > .md-button {
+    line-height: 26px;
+}
+
+@media (min-width: 768px) {
+    .sidebar-mini.sidebar-collapse .cmd-menu .md-button {
+        padding: 12px 16px;
+        line-height: 20px;
+        text-align: left;
+        overflow: hidden;
+        display: block;
+        min-width: 50px;
+    }
+    .sidebar-mini.sidebar-collapse .cmd-menu li:hover {
+        min-width: 230px;
+    }
+
+    .sidebar-mini.sidebar-collapse .cmd-menu .treeview-menu .md-button {
+        padding: 17px 0px 0px 21px;
+        margin: 0 0 5px -5px;
+        width: 180px;
+        line-height: 0px;
+    }
+}
+/*.cmd-menu .md-button:hover,
+.cmd-menu .md-button:focus {
+    background: #267ED5 !important;
+}*/
+/*.cmd-menu .md-button md-icon {
+    color: white;
+}
+
+.cmd-menu md-select {
+
+    /!* Override md-select margins.  With margins the menu will look incorrect and causes mobile list
+       to not be scrollable.
+     *!/
+    margin: 0;
+    width: 100%;
+}
+
+.cmd-menu md-select md-select-label {
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.cmd-menu md-select md-select-label span {
+    margin-right: auto;
+    padding-left: 13px;
+}
+
+.cmd-menu md-select .md-select-icon {
+    margin-right: 28px;
+}
+
+.cmd-menu button.md-button::-moz-focus-inner {
+    padding: 0;
+}
+.cmd-menu .md-button.active {
+    background: #267ED5;
+}
+.menu-heading {
+    display: block;
+    line-height: 32px;
+    margin: 0;
+    padding: 8px 16px 0;
+    text-align: left;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.54)
+}
+.cmd-menu li.parentActive,
+.cmd-menu li.parentActive .menu-toggle-list {
+    /!*background-color: #2C80D2 !important;*!/
+}
+.menu-toggle-list {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    -webkit-transition-property: height;
+    -moz-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    -moz-transition-property: height;
+    transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    transition-property: height;
+}
+.cmd-menu .menu-toggle-list a.md-button {
+    display: block;
+    padding: 0 16px 0 32px;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+}
+
+ul#cmd-menu-Directives {
+    margin-bottom: 20px;
+}
+.md-button-toggle .md-toggle-icon {
+    display: block;
+    margin-left: auto;
+    speak: none;
+    vertical-align: middle;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+}
+.md-button-toggle .md-toggle-icon.toggled {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}*/
+
+/* End Docs Menu */
+
+.login-box {
+    background: #fff;
+}
+
+/************
+ * MD-ICON
+ ************/
+md-input-container:not(.md-input-invalid) > md-icon.email {
+    color: green; }
+md-input-container:not(.md-input-invalid) > md-icon.person {
+    color: dodgerblue; }
+md-input-container.md-input-invalid > md-icon.email,
+md-input-container.md-input-invalid > md-icon.person {
+    color: red; }
+
+/* End MD-ICON */
+
+/************
+ * MD-SELECT
+ ************/
+md-select-menu md-option[selected] {
+    background-color: #b5bbc8;
+}
+
+/* End MD-SELECT */
+
+/************
+ * button-sheet
+ ************/
+.bottomSheetdemoBasicUsage .md-inline-list-icon-label {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -10px;
+    height: 24px;
+    vertical-align: middle; }
+.bottomSheetdemoBasicUsage .md-grid-item-content {
+    height: 96px; }
+.bottomSheetdemoBasicUsage .md-grid-item-content md-icon {
+    height: 48px;
+    width: 48px; }
+.bottomSheetdemoBasicUsage .md-grid-text {
+    padding-bottom: 5px; }
+.bottomSheetdemoBasicUsage md-list-item, .bottomSheetdemoBasicUsage md-list-item .md-list-item-inner {
+    min-height: 48px; }
+.bottomSheetdemoBasicUsage h2 {
+    line-height: 36px;
+    padding-top: 10px; }
+.bottomSheetdemoBasicUsage .md-subheader .md-subheader-inner {
+    padding: 0px; }
+.bottomSheetdemoBasicUsage md-toast {
+    background-color: #B14141; }
+.bottomSheetdemoBasicUsage md-toast > * {
+    font-weight: bolder; }
+
+md-bottom-sheet {
+    left: 230px;
+    right: 0;
+}
+
+.sidebar-mini.sidebar-collapse md-bottom-sheet {
+    left: 50px;
+    right: 0;
+}
+
+/* End button-sheet */
+
+/************
+ * md-toast
+ ************/
+md-toast.md-top {
+    top: 65px;
+}
+
+/* End md-toast */
+
+.fadein,
+.fadeout {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.fadein.ng-hide-remove,
+.fadeout.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+    display: block !important;
+}
+
+.fadeout.ng-hide-add,
+.fadein.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+    display: block !important;
+}
+
+
+.animate-enter,
+.animate-leave
+{
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space:nowrap;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+    transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+    opacity:0;
+    max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+    opacity:1;
+    max-height:40px;
+}

@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box box-primary">
+            <div class="box-header">
+                <h3 class="box-title">Responsive Hover Table</h3>
+                <div class="box-tools">
+                    <div class="input-group" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control input-sm pull-right" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Reason</th>
+                    </tr>
+                    <tr>
+                        <td>183</td>
+                        <td>John Doe</td>
+                        <td>11-7-2014</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                        <td>219</td>
+                        <td>Alexander Pierce</td>
+                        <td>11-7-2014</td>
+                        <td><span class="label label-warning">Pending</span></td>
+                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                        <td>657</td>
+                        <td>Bob Doe</td>
+                        <td>11-7-2014</td>
+                        <td><span class="label label-primary">Approved</span></td>
+                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                        <td>175</td>
+                        <td>Mike Doe</td>
+                        <td>11-7-2014</td>
+                        <td><span class="label label-danger">Denied</span></td>
+                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                </table>
+            </div><!-- /.box-body -->
+
+        </div><!-- /.box -->
+
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">접수내용</h3>
+            </div><!-- /.box-header -->
+            <!-- form start -->
+            <md-content layout-padding class="autoScroll">
+                <form role="form">
+                    <div layout layout-sm="column">
+                        <md-input-container class="md-icon-float" >
+                            <!-- Use floating label instead of placeholder -->
+                            <label>이름</label>
+                            <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+                            <input ng-model="user.name" type="text">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>진료과목선택</label>
+                            <md-select ng-init="subjects = ['문진', '의과', '치과', '한의과']" ng-model="subject" multiple="true">
+                                <md-option ng-repeat="subject in subjects" value="{{subject}}">{{subject}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <md-input-container>
+                        <label>내용</label>
+                        <textarea ng-model="user.content" columns="1" md-maxlength="150"></textarea>
+                    </md-input-container>
+                    <!--<div layout="row">
+                        <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">문진</md-checkbox>
+                        <md-checkbox ng-model="data.cb2" aria-label="Checkbox 1">의과</md-checkbox>
+                        <md-checkbox ng-model="data.cb3" aria-label="Checkbox 1">치과</md-checkbox>
+                        <md-checkbox ng-model="data.cb4" aria-label="Checkbox 1">한의과</md-checkbox>
+                    </div>-->
+                </form>
+            </md-content>
+        </div><!-- /.box -->
+
+
+    </div>
+</div>

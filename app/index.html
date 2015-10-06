@@ -1,0 +1,53 @@
+<!doctype html>
+<html ng-controller="CommonCtrl">
+	<head>
+	  	<meta charset="utf-8">
+	    <title></title>
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<!-- build:css styles/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="vendor/angular-material/angular-material.css" />
+		<link rel="stylesheet" href="vendor/admin-lte/dist/css/AdminLTE.css" />
+		<link rel="stylesheet" href="vendor/admin-lte/dist/css/skins/skin-black-light.css" />
+		<link rel="stylesheet" href="vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
+		<link rel="stylesheet" href="vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!-- build:css styles/main.css -->
+		<link rel="stylesheet" href="styles/basic.css">
+		<!-- endbuild -->
+
+		<!--<link rel="stylesheet" href="styles/docs.css">-->
+		<!-- 다음 주소 api -->
+		<script src='http://dmaps.daum.net/map_js_init/postcode.v2.js'></script>
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Ionicons -->
+		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+		<!--<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">-->
+
+		<link ng-repeat="stylesheet in stylesheets" ng-href="{{stylesheet}}" type="text/css" rel="stylesheet" />
+    </head>
+	<body class="hold-transition skin-black-light sidebar-mini">
+    	<!--[if lte IE 8]>
+    	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    	<![endif]-->
+
+    	<!--<div>
+			<a href="#/view1" class="btn">view1</a>
+			<a href="#/view2" class="btn">view2</a>
+			<a href="#/grid" class="btn">grid</a>
+			<a href="#/admin" class="btn" ng-show="isAdmin">admin</a>
+			<a href="#/view3" class="btn">view3</a>
+		</div>-->
+
+		<div ui-view></div>
+
+		<script data-main="scripts/main" src="scripts/require.js"></script>
+	</body>
+
+</html>
