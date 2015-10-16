@@ -17,12 +17,12 @@ define('common/directives/pagingCustom', [], function () {
                 link: function (scope, elem, attrs) {
                     var html = '';
 
-                    html = '<pagination boundary-links="true" total-items="totalItems" max-size="10"';
+                    html = '<uib-pagination boundary-links="true" total-items="totalItems" max-size="10"';
                     html += '    ng-model="currentPage"  ng-change="pageChanged()"';
                     html += '    class="pagination-sm" items-per-page="itemsPerPage"';
                     html += '    previous-text="&lsaquo;" next-text="&rsaquo;"';
                     html += '    first-text="&laquo;" last-text="&raquo;">';
-                    html += '</pagination>';
+                    html += '</uib-pagination>';
                     elem.append($compile(html)(scope));
 
                     // paging 관련 setting

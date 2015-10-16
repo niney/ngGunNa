@@ -16,7 +16,9 @@
 		"requirejs": null,
 	  	"admin-lte": null,
 	  	"ngstorage": null,
-	  	"bootstrap-datepicker": null
+	  	"bootstrap-datepicker": null,
+	    "moment": null,
+	  	"angular-loading-bar": null
 	},
 	"overrides": {
 	  	"bootstrap": {

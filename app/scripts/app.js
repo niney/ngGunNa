@@ -24,7 +24,7 @@ define(
 
  		//모듈 선언
 		var modulesName = ['ui.router', 'ngMaterial', 'ngResource',
-			'ngAnimate', 'ngMessages', 'ngStorage', 'config', 'ui.bootstrap'];
+			'ngAnimate', 'ngMessages', 'ngStorage', 'config', 'ui.bootstrap', 'angular-loading-bar'];
 		modulesName = modulesName.concat(modulesName, components);
 		var app = angular.module('ngAngularDemo', modulesName,
 				['$provide', '$compileProvider', '$controllerProvider', '$filterProvider',
@@ -37,7 +37,8 @@ define(
 				routeConfig.setControllerProvider($controllerProvider); //for controllers
 				routeConfig.setFilterProvider($filterProvider); //for filters
 			}])
-			.config(['$mdThemingProvider', '$mdIconProvider', function ($mdThemingProvider, $mdIconProvider) {
+			.config(['$mdThemingProvider', '$mdIconProvider', 'cfpLoadingBarProvider',
+					function ($mdThemingProvider, $mdIconProvider, cfpLoadingBarProvider) {
 				$mdIconProvider
 					.iconSet('action', 'images/iconsets/action-icons.svg', 24)
 					.iconSet('alert', 'images/iconsets/alert-icons.svg', 24)
@@ -56,6 +57,7 @@ define(
 					.iconSet('social', 'images/iconsets/social-icons.svg', 24)
 					.iconSet('toggle', 'images/iconsets/toggle-icons.svg', 24)
 				;
+				cfpLoadingBarProvider.includeSpinner = false;
 			}])
 			.factory('authInterceptSvc', authInterceptSvc)
 			.factory('authSvc', authSvc)

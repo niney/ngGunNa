@@ -57,7 +57,8 @@ require.config({
 		"md-chips-select": "../vendor/md-chips-select/dist/md-chips-select",
 		"moment": "../vendor/moment/moment",
 		"datePicker": "../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker",
-		"datePicker-kr": "../vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr"
+		"datePicker-kr": "../vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr",
+		"angular-loading-bar": "../vendor/angular-loading-bar/build/loading-bar"
 	},
 /*
 	shim:
@@ -107,6 +108,9 @@ require.config({
 		},
 		'datePicker-kr': {
 			deps: ['datePicker']
+		},
+		'angular-loading-bar': {
+			deps: ['angular']
 		}
 	},
 
@@ -137,6 +141,7 @@ require(
 		'moment',
 		'datePicker',
 		'datePicker-kr',
+		'angular-loading-bar',
 		'app', // app.js
 		'routes' // routes.js
 	],
