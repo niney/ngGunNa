@@ -48,6 +48,7 @@ require.config({
 		"angular-route": "../vendor/angular-route/angular-route",
 		"angular-ui-router": "../vendor/angular-ui-router/release/angular-ui-router",
 		"angular-resource": "../vendor/angular-resource/angular-resource",
+		"angular-cookies": "../vendor/angular-cookies/angular-cookies",
 		"angular-animate": "../vendor/angular-animate/angular-animate",
 		"angular-aria": "../vendor/angular-aria/angular-aria",
 		"angular-messages": "../vendor/angular-messages/angular-messages",
@@ -58,7 +59,11 @@ require.config({
 		"moment": "../vendor/moment/moment",
 		"datePicker": "../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker",
 		"datePicker-kr": "../vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr",
-		"angular-loading-bar": "../vendor/angular-loading-bar/build/loading-bar"
+		"angular-loading-bar": "../vendor/angular-loading-bar/build/loading-bar",
+		"angular-translate": "../vendor/angular-translate/angular-translate",
+		//"angular-translate-loader-partial": "common/lib/loader-partial",
+		//"angular-translate-storage-cookie": "common/lib/storage-cookie",
+		"angular-sanitize": "../vendor/angular-sanitize/angular-sanitize"
 	},
 /*
 	shim:
@@ -74,6 +79,9 @@ require.config({
 			deps: ['angular']
 		},
 		'angular-resource': {
+			deps: ['angular']
+		},
+		'angular-cookies': {
 			deps: ['angular']
 		},
 		'angular-animate': {
@@ -111,6 +119,18 @@ require.config({
 		},
 		'angular-loading-bar': {
 			deps: ['angular']
+		},
+		'angular-translate': {
+			deps: ['angular']
+		},
+		/*'angular-translate-loader-partial': {
+			deps: ['angular-translate']
+		},
+		'angular-translate-storage-cookie': {
+			deps: ['angular-translate']
+		},*/
+		'angular-sanitize': {
+			deps: ['angular']
 		}
 	},
 
@@ -131,6 +151,7 @@ require(
 		'angular',
 		'angular-ui-router',
 		'angular-resource',
+		'angular-cookies',
 		'angular-animate',
 		'angular-aria',
 		'angular-messages',
@@ -142,6 +163,8 @@ require(
 		'datePicker',
 		'datePicker-kr',
 		'angular-loading-bar',
+		'angular-translate',
+		'angular-sanitize',
 		'app', // app.js
 		'routes' // routes.js
 	],

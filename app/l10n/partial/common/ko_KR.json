@@ -1,0 +1,14 @@
+{
+  "name": "이름"
+  , "gender": "성별"
+  , "nationality": "국적"
+  , "birthDay": "생년월일"
+  , "job": "직업"
+  , "receipt": "접수"
+  , "content": "내용"
+  , "ageFormat": "만 xx세"
+  , "koNameRequired": "한글이름 (필수)"
+  , "engNameRequired": "영문이름 (필수)"
+  , "entryDate": "입국일"
+  , "jibun": "지번"
+}

@@ -19,8 +19,10 @@ define(
 			routeConfig.setControllerProvider($controllerProvider); //for controllers
 			routeConfig.setFilterProvider($filterProvider); //for filters
 		}])
-		.config(['$stateProvider', 'user_roles', function($stateProvider, user_roles) {
+		.config(['$stateProvider', 'user_roles', '$translatePartialLoaderProvider',
+					function($stateProvider, user_roles, $translatePartialLoaderProvider) {
 			routes($stateProvider, user_roles, moduleName, masterPage);
+			$translatePartialLoaderProvider.addPart('patient');
 		}])
 		;
 		return app;

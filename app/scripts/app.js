@@ -10,7 +10,9 @@ define(
 		'components',
 		'common/lib/authInterceptSvc',
 		'common/lib/authSvc',
-		'common/lib/authUserRoles'
+		'common/lib/authUserRoles',
+		'common/lib/translate/loaderPartial',
+		'common/lib/translate/storageCookie'
 	],
 /*
 	이 부분도 주의깊게 살펴봐야한다.
@@ -20,11 +22,17 @@ define(
 	파라메터로 받을 때는 routeConfig와 같이 camel case로 바뀌는 것을 볼 수 있다.
 */	
  	function(angular, routeConfig, basicConfig, navConfig, eventConfig, components,
-			 authInterceptSvc, authSvc, authUserRoles) {
+			 authInterceptSvc, authSvc, authUserRoles, loaderPartial, storageCookie) {
 
+		// 지역화 관련 모듈 등록
+		angular.module('pascalprecht.translate')
+				.provider('$translatePartialLoader', loaderPartial)
+				.factory('$translateCookieStorage', storageCookie)
+		;
  		//모듈 선언
-		var modulesName = ['ui.router', 'ngMaterial', 'ngResource',
-			'ngAnimate', 'ngMessages', 'ngStorage', 'config', 'ui.bootstrap', 'angular-loading-bar'];
+		var modulesName = ['ui.router', 'ngMaterial', 'ngResource', 'ngCookies', 'ngSanitize',
+			'ngAnimate', 'ngMessages', 'ngStorage', 'config',
+			'ui.bootstrap', 'angular-loading-bar', 'pascalprecht.translate'];
 		modulesName = modulesName.concat(modulesName, components);
 		var app = angular.module('ngAngularDemo', modulesName,
 				['$provide', '$compileProvider', '$controllerProvider', '$filterProvider',
@@ -59,8 +67,8 @@ define(
 				;
 				cfpLoadingBarProvider.includeSpinner = false;
 			}])
-			.factory('authInterceptSvc', authInterceptSvc)
-			.factory('authSvc', authSvc)
+			.factory('authInterceptSvc', authInterceptSvc) // 인증 Intercept
+			.factory('authSvc', authSvc) // 인증 확인, 검사 등등
 			.config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
 					function ($stateProvider, $urlRouterProvider, $httpProvider) {
 				$httpProvider.interceptors.push('authInterceptSvc');
@@ -79,6 +87,17 @@ define(
 				// extra
 				$httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
 				$httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
+			}])
+			.config(['$translateProvider', '$translatePartialLoaderProvider',
+					function ($translateProvider, $translatePartialLoaderProvider) {
+				$translateProvider.useLoader('$translatePartialLoader', {
+					urlTemplate: '/l10n/partial/{part}/{lang}.json'
+				})
+					.useSanitizeValueStrategy(null) // Tell the module what language to use by default
+					.preferredLanguage('ko_KR') // Tell the module to store the language in the cookies
+					.useCookieStorage()
+				;
+				$translatePartialLoaderProvider.addPart('common');
 			}])
 			.run(['$rootScope', '$state', '$stateParams', '$sessionStorage', 'authSvc',
 					function ($rootScope, $state, $stateParams, $sessionStorage, authSvc) {

@@ -7,9 +7,16 @@ define('common/directives/adminLte', [], function () {
             restrict: 'A',
             link: function($scope, $element) {
 
+
                 // 이미 존재 하는지 확인
-                if(!!$.AdminLTE)
-                    return;
+                if(!!$.AdminLTE) { // 존재하면 true
+                    $($.AdminLTE.options.sidebarToggleSelector).each(function (i, ele) {
+                        if(!!$._data(ele).events) { // 이벤트 존재 여부 // 존재하면 true
+                            return; // 존재 하므로 return
+                        }
+                    });
+                }
+
 
                 //Make sure jQuery has been loaded before app.js
                 if (typeof jQuery === "undefined") {
