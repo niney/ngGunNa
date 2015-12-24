@@ -63,7 +63,10 @@ require.config({
 		"angular-translate": "../vendor/angular-translate/angular-translate",
 		//"angular-translate-loader-partial": "common/lib/loader-partial",
 		//"angular-translate-storage-cookie": "common/lib/storage-cookie",
-		"angular-sanitize": "../vendor/angular-sanitize/angular-sanitize"
+		"react": '../vendor/react/react.min',
+		"react-dom": '../vendor/react/react-dom.min',
+		"angular-sanitize": "../vendor/angular-sanitize/angular-sanitize",
+		"babel": '../vendor/babel/browser'
 	},
 /*
 	shim:
@@ -131,6 +134,9 @@ require.config({
 		},*/
 		'angular-sanitize': {
 			deps: ['angular']
+		},
+		'react-dom': {
+			deps: ['react']
 		}
 	},
 
@@ -165,6 +171,8 @@ require(
 		'angular-loading-bar',
 		'angular-translate',
 		'angular-sanitize',
+		'react',
+		'react-dom',
 		'app', // app.js
 		'routes' // routes.js
 	],

@@ -27,7 +27,7 @@ define([
 									'common/directives/adminLte',
 									'common/directives/datePicker',
 									'common/directives/navMenu',
-									'common/directives/pagingCustom'
+									'es6!common/directives/pagingCustom'
 								],
 								filters: ['common/filters/humanizeDoc',
 									'common/filters/nospace',

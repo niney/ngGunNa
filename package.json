@@ -20,7 +20,8 @@
     "grunt-wiredep": "^2.0.0",
     "grunt-replace": "^0.10.2",
     "time-grunt": "^1.0.0",
-    "jit-grunt": "^0.9.1"
+    "jit-grunt": "^0.9.1",
+    "requirejs-babel-plugin": "^0.1.6"
   },
   "engines": {
     "node": ">=0.10.0"

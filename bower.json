@@ -22,7 +22,9 @@
 	    "moment": null,
 	  	"angular-loading-bar": null,
 	  	"angular-translate": null,
-	    "angular-translate-loader-url": null
+	    "angular-translate-loader-url": null,
+		"babel": null,
+		"react": null
 	},
 	"overrides": {
 	  	"bootstrap": {
